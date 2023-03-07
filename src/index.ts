@@ -1,5 +1,4 @@
 import express, { Request, Response } from 'express'
-import db from './db'
 import dotenv from 'dotenv'
 
 dotenv.config()
@@ -12,6 +11,5 @@ app.get('/', (req: Request, res: Response) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`app runnin on port ${PORT}`)
-  db.runMigrations()
+  console.log(`app running on port ${PORT}`)
 })
